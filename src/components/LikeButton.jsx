@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function LikeButton() {
   const randomLikeValue = Math.floor(Math.random() * Math.floor(999));
 
-  let [likes, setLikes] = useState(randomLikeValue);
+  let [likes, setLikes] = useState(randomLikeValue); //Start värde, retunerar en variabel och en metod
 
   function handleClick() {
     setLikes(likes + 1);
