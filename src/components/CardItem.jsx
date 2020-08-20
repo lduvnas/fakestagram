@@ -17,7 +17,9 @@ export default function CardItem({ title, description, imageURL }) {
     if (showDescription === false) {
       return (
         <p>
-          <a onClick={() => setShowDescription(true)}>read more</a>
+          <a href="www.lovaduvnas.se" onClick={() => setShowDescription(true)}>
+            read more
+          </a>
         </p>
       );
     } else {
