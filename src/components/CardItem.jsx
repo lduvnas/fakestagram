@@ -1,8 +1,9 @@
 import React from "react";
 import LikeButton from "./LikeButton";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-export default function CardItem({ title, description, imageURL }) {
+export default function CardItem({ title, description, imageURL, id }) {
   let [showDescription, setShowDescription] = useState(false);
 
   function renderDescription() {
@@ -17,7 +18,7 @@ export default function CardItem({ title, description, imageURL }) {
     if (showDescription === false) {
       return (
         <p>
-          <a href="www.lovaduvnas.se" onClick={() => setShowDescription(true)}>
+          <a className="btn btn-block" onClick={() => setShowDescription(true)}>
             read more
           </a>
         </p>
@@ -40,6 +41,7 @@ export default function CardItem({ title, description, imageURL }) {
             Download image
           </a>
           <LikeButton />
+          <Link to={`/image/${id}`}>Go to Image</Link>
         </div>
       </div>
     </div>

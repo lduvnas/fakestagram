@@ -23,6 +23,8 @@ export default function CardList() {
       {imageList.map((item, index) => {
         return (
           <CardItem
+            key={index}
+            id={index}
             title={item.title}
             description={item.description}
             imageURL={item.imageURL}
@@ -32,3 +34,12 @@ export default function CardList() {
     </div>
   );
 }
+
+/* function renderLikeButton() {
+  const message = isLiked ? "Du har gillat" : "Gilla";
+  return (
+    <button onClick={handleClick} className="btn btn-primary btn-block">
+      {message} ({likes})
+    </button>
+  );
+}  */
